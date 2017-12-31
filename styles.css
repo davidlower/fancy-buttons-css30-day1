@@ -1,5 +1,13 @@
-body {
+html {
+   margin: 20px;
+
    background-color: pink;
+
+   font-size: 30px;
+}
+
+.space {
+   padding: 20px 0;
 }
 
 /* ----------------------
@@ -37,8 +45,11 @@ FACEBOOK Buttons
 .btn-3d {
    cursor: pointer;
 
+   color: #fff;
    border: none;
    outline: none;
+
+   font-size: 1.2rem;
 }
 
 .btn-3d-1 {
@@ -46,16 +57,15 @@ FACEBOOK Buttons
 
    padding: 10px 20px;
 
-   color: #fff;
    border-radius: 2px;
    background-color: #25f49d;
    box-shadow: inset 0 3px 3px 0 #5afab7,
    -1px 1px 1px 0 #027343,
    -2px 2px 2px 0 #0c8250,
-   -3px 3px 2px 0 #1d9d67;
-   text-shadow: 1px 0px 2px #047d38;
+   -3px 3px 2px 0 #1d9d67,
+   -4px 4px 3px 0 #1d9d67;
+   text-shadow: 1px 1px 2px #07bb54;
 
-   font-size: 1.2rem;
 }
 
 .btn-3d-1:hover {
@@ -73,4 +83,64 @@ FACEBOOK Buttons
    background-color: #00ec89;
    box-shadow: inset 0 3px 3px 0 #25f49d,
    -1px 1px 1px 0 #027343;
+}
+
+
+/* 3d BUTTON TWO */
+
+.btn-3d-2 {
+   position: relative;
+
+   width: 3rem;
+   height: 3rem;
+
+   border-radius: 100%;
+   background-color: #09a6ff;
+   box-shadow: 0px 1px 2px 0px #087cad,
+   inset 0px 1px #54c1ff,
+   inset 0px -1px #54c1ff;
+   text-shadow: 0px 4px 1px #087cad;
+}
+
+.btn-3d-2:hover {
+   background-color: #39b2f7;
+}
+
+.btn-3d-2:active {
+   box-shadow: 0px 1px 5px 0px #087cad,
+   inset 0px 1px #54c1ff,
+   inset 0px -1px #54c1ff;
+   text-shadow: 0px 2px 1px #087cad;
+}
+
+
+/* 3D button 3 */
+
+.number {
+   padding: 10px;
+
+   color: #fff;
+   border-right: 1px solid #57011d;
+   border-top-left-radius: 5px;
+   border-top-left-radius: 5px;
+   background-color: #ff0658;
+
+   font-size: 1rem;
+}
+
+.btn-3d-3 {
+   padding: 10px;
+
+   color: #fff;
+   /* border: none; */
+   border-left: 1px solid #57011d;
+   border-top-right-radius: 5px;
+   border-bottom-right-radius: 5px;
+   outline: none;
+   background-color: #f72e70;
+   font-size: 1rem;
+}
+
+.btn-3d-3::before {
+   content: "2";
 }
