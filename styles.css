@@ -1,8 +1,6 @@
 html {
    margin: 20px;
 
-   background-color: pink;
-
    font-size: 30px;
 }
 
@@ -219,6 +217,8 @@ GRADIENT BUTTONS
 ---------------------- */
 
 .btn-gradient {
+   position: relative;
+
    cursor: pointer;
 
    color: #fff;
@@ -238,7 +238,7 @@ GRADIENT BUTTONS
    color: #01a3d6;
    border: 7px solid transparent;
    -o-border-image: linear-gradient(to top right, #01a3d6, #06ffda) 1;
-   border-image: -webkit-gradient(linear, left bottom, right top, from(#01a3d6), to(#06ffda));
+   border-image: -webkit-gradient(linear, left bottom, right top, from(#01a3d6), to(#06ffda)) 1;
    border-image: linear-gradient(to top right, #01a3d6, #06ffda) 1;
    -webkit-box-shadow: 0px 1px 1px #51696e;
    box-shadow: 0px 1px 1px #51696e;
@@ -262,6 +262,8 @@ ANIMATED BUTTONS
    padding: 10px 40px;
 
    cursor: pointer;
+   -webkit-transition: all 0.3s ease;
+   transition: all 0.3s ease;
 
    color: #8e2ae6;
    border: none;
@@ -269,7 +271,6 @@ ANIMATED BUTTONS
    background-color: #ff9900;
 
    font-size: 0.8rem;
-   transition: all 0.3s ease;
 }
 
 .btn-animated-1 {
@@ -278,7 +279,17 @@ ANIMATED BUTTONS
 }
 
 .btn-animated-1:hover {
+   -webkit-animation: button-animation 4s linear infinite;
    animation: button-animation 4s linear infinite;
+}
+
+@-webkit-keyframes button-animation {
+   from {
+      background-position: 0 0;
+   }
+   to {
+      background-position: 40px 0;
+   }
 }
 
 @keyframes button-animation {
@@ -295,20 +306,78 @@ ANIMATED BUTTONS
 .btn-animated-2::after {
    position: absolute;
 
-   padding: 0 25px 0 15px;
+   padding: 0 25px 0 8px;
+
    content: ">";
 
    opacity: 0;
+   color: #8e2ae6;
 }
 
 .btn-animated-2:hover {
-   padding: 10px 55px 10px 25px;
+   padding: 10px 50px 10px 25px;
 }
 
 .btn-animated-2:hover::after {
    opacity: 1;
 }
 
-.btn-animated-2:active::after {
-   color: #0dff00;
+
+/* ----------------------
+TOGGLE BUTTONS
+---------------------- */
+
+.btn-toggle {
+   display: inline-block;
+
+   margin: 0 20px 0 0;
+
+   vertical-align: top;
+}
+
+.btn-toggle-input-1 {
+   display: none;
+}
+
+.final-toggle-1 {
+   position: relative;
+
+   display: inline-block;
+
+   width: 46px;
+   height: 22px;
+
+   cursor: pointer;
+
+   border-radius: 15px;
+   background-color: #a2a2a2;
+   -webkit-box-shadow: 0 1px 3px #5c5c5c;
+   box-shadow: 0 1px 3px #5c5c5c;
+}
+
+.final-toggle-1::before {
+   position: absolute;
+
+   display: inline-block;
+
+   width: 16px;
+   height: 16px;
+   margin: 3px 0 3px 25px;
+
+   content: "";
+   -webkit-transition: all 0.3s ease;
+   transition: all 0.3s ease;
+
+   border-radius: 100%;
+   background-color: #fff;
+   -webkit-box-shadow: 0 0 3px #494949;
+   box-shadow: 0 0 3px #494949;
+}
+
+.btn-toggle-input-1:checked+.final-toggle-1 {
+   background-color: #31B99A;
+}
+
+.btn-toggle-input-1:checked+.final-toggle-1::before {
+   margin: 3px 0 3px 5px;
 }
