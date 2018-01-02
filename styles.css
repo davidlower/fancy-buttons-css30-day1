@@ -306,16 +306,17 @@ ANIMATED BUTTONS
 .btn-animated-2::after {
    position: absolute;
 
-   padding: 0 25px 0 8px;
+   padding: 0px 25px 0px 10px;
 
    content: ">";
 
    opacity: 0;
    color: #8e2ae6;
+   transition: all 0.3s ease;
 }
 
 .btn-animated-2:hover {
-   padding: 10px 50px 10px 25px;
+   padding: 10px 55px 10px 25px;
 }
 
 .btn-animated-2:hover::after {
