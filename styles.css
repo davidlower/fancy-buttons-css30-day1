@@ -1,11 +1,40 @@
 html {
    margin: 20px;
 
-   font-size: 30px;
+   font-size: 26px;
+   --p-color: #0ed487;
+   --s-color: #0cc87f;
 }
 
 .space {
    padding: 20px 0;
+}
+
+.grid {
+   display: grid;
+
+   width: 90%;
+   max-width: 1000px;
+   margin: 5% auto;
+
+   grid-template-columns: 1fr 1fr 1fr;
+   grid-template-rows: repeat(3, 200px);
+}
+
+.button-item {
+   display: -webkit-box;
+   display: -ms-flexbox;
+   display: flex;
+   -webkit-box-align: center;
+   align-items: center;
+   -ms-flex-align: center;
+   -webkit-box-pack: center;
+   -ms-flex-pack: center;
+   justify-content: center;
+
+   width: 100%;
+
+   grid-column: span 1;
 }
 
 /* ----------------------
@@ -13,7 +42,7 @@ FACEBOOK Buttons
 ---------------------- */
 
 .facebook-btn {
-   padding: 6px 12px;
+   padding: 8px 16px;
 
    cursor: pointer;
 
@@ -54,17 +83,17 @@ FACEBOOK Buttons
 .btn-3d-1 {
    position: relative;
 
-   padding: 10px 20px;
+   padding: 11px 24px;
 
    border-radius: 2px;
-   background-color: #25f49d;
-   -webkit-box-shadow: inset 0 3px 3px 0 #5afab7,
+   background-color: var(--p-color);
+   -webkit-box-shadow: inset 0 3px 3px 0 #18e495,
    -1px 1px 1px 0 #027343,
    -2px 2px 2px 0 #0c8250,
    -3px 3px 2px 0 #1d9d67,
    -4px 4px 3px 0 #24a770,
    -6px 6px 3px 0 #2ab078;
-   box-shadow: inset 0 3px 3px 0 #5afab7,
+   box-shadow: inset 0 3px 3px 0 #18e495,
    -1px 1px 1px 0 #027343,
    -2px 2px 2px 0 #0c8250,
    -3px 3px 2px 0 #1d9d67,
@@ -75,14 +104,14 @@ FACEBOOK Buttons
 }
 
 .btn-3d-1:hover {
-   background-color: #00ec89;
-   -webkit-box-shadow: inset 0 3px 3px 0 #25f49d,
+   background-color: #0ec77f;
+   -webkit-box-shadow: inset 0 3px 3px 0 #18e495,
    -1px 1px 1px 0 #027343,
    -2px 2px 2px 0 #0c8250,
    -3px 3px 2px 0 #1d9d67,
    -4px 4px 3px 0 #24a770,
    -6px 6px 3px 0 #2ab078;
-   box-shadow: inset 0 3px 3px 0 #25f49d,
+   box-shadow: inset 0 3px 3px 0 #18e495,
    -1px 1px 1px 0 #027343,
    -2px 2px 2px 0 #0c8250,
    -3px 3px 2px 0 #1d9d67,
@@ -94,10 +123,10 @@ FACEBOOK Buttons
    top: 5px;
    left: -5px;
 
-   background-color: #00ec89;
-   -webkit-box-shadow: inset 0 3px 3px 0 #25f49d,
+   background-color: var(--p-color);
+   -webkit-box-shadow: inset 0 3px 3px 0 #18e495,
    -1px 1px 1px 0 #027343;
-   box-shadow: inset 0 3px 3px 0 #25f49d,
+   box-shadow: inset 0 3px 3px 0 #18e495,
    -1px 1px 1px 0 #027343;
 }
 
@@ -309,10 +338,11 @@ ANIMATED BUTTONS
    padding: 0px 25px 0px 10px;
 
    content: ">";
+   -webkit-transition: all 0.3s ease;
+   transition: all 0.3s ease;
 
    opacity: 0;
    color: #8e2ae6;
-   transition: all 0.3s ease;
 }
 
 .btn-animated-2:hover {
@@ -381,4 +411,19 @@ TOGGLE BUTTONS
 
 .btn-toggle-input-1:checked+.final-toggle-1::before {
    margin: 3px 0 3px 5px;
+}
+
+
+@media screen and (max-width: 920px) {
+   .grid {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: repeat(4, 200px);
+   }
+}
+
+@media screen and (max-width: 550px) {
+   .grid {
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(8, 150px);
+   }
 }
